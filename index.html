@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0b0a1c" />
+<meta name="color-scheme" content="dark" />
+<meta name="description" content="A little universe, made just for Satwika. Seven small worlds, a few memories, and a birthday letter written with love." />
+<meta property="og:title" content="Satwika's Universe" />
+<meta property="og:description" content="A little universe, made just for you." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%230b0a1c'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23efe7d6' stroke-width='1.5'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23f3d78a'/%3E%3C/svg%3E" />
+<title>Satwika's Universe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="gate" id="gate" hidden><button id="gateBtn" aria-label="Tap to open Satwika's Universe with sound"><span class="g-star">✦</span><span class="g-title">Satwika's Universe</span><span class="g-tap">Tap to open</span><small>sound on, please 🎧</small></button></div>
+<canvas id="sky" aria-hidden="true"></canvas>
+<svg class="eyepiece" id="eyepiece" viewBox="0 0 1000 1000" aria-hidden="true"></svg>
+<div class="vignette" aria-hidden="true"></div>
+
+<header class="chrome">
+  <button class="brand" id="home" aria-label="Back to the beginning"><i></i>Satwika's Universe</button>
+</header>
+<nav class="plates-nav" id="platesNav" aria-label="The seven worlds"></nav>
+
+<section class="hero" id="hero" aria-labelledby="title">
+  <h1 id="title"><span class="l1" data-split>Satwika's</span><span class="l2" data-split>Universe</span></h1>
+  <div class="hero-foot">
+    <p class="hero-note">Happy Birthday, Satwika ✦<br />A small collection of the things that make this universe feel a little more like ours.</p>
+    <button class="enter" id="enter">Enter the universe <b>↗</b></button>
+  </div>
+  <p class="cue" aria-hidden="true"><i></i>scroll</p>
+</section>
+
+<div id="journey" aria-hidden="true"></div>
+<div id="plates"></div>
+
+<section class="letter" id="letter" aria-labelledby="letterTitle">
+  <div class="letter-head">
+    <h2 id="letterTitle">One more trip<br /><em>around the sun.</em></h2>
+  </div>
+  <article class="letter-body">
+    <h3>Hey, Pandu. ❤️</h3>
+    <div id="letterText"></div>
+    <p class="signature">From your favourite overexplainer. ✦</p>
+  </article>
+</section>
+
+<section class="closing" id="closing">
+  <h2>Happy Birthday<span>.</span></h2>
+  <p>Made with a little stardust, a lot of overexplaining, and all the love I wanted to put into one little universe.</p>
+  <button class="enter" id="again">Start again <b>↗</b></button>
+</section>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lbCap" hidden>
+  <button class="lb-nav prev" id="lbPrev" aria-label="Previous photo">‹</button>
+  <button class="lb-nav next" id="lbNext" aria-label="Next photo">›</button>
+  <button class="lb-close" id="lbClose" aria-label="Close photo">×</button>
+  <img id="lbImg" alt="" />
+  <p id="lbCap"></p>
+</div>
+<audio id="audio" loop autoplay playsinline preload="auto"></audio>
+<script src="content.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
